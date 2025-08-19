@@ -19,11 +19,11 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKERHUB_SECRET }}
+        username: ${{ secrets.DOCKER_SECRET }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
 
     - name: Build and Push Docker image
       uses: docker/build-push-action@v4
       with:
         push: true
-        tags: ${{ secrets.DOCKERHUB_SECRET }}/dockerclimateapp:latest
+        tags: ${{ secrets.DOCKER_SECRET }}/dockerclimateapp:latest
