@@ -28,4 +28,4 @@ jobs:
           context: ./docker-app
           file: ./docker-app/Dockerfile
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/dockerclimateapp:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/climateapp:latest
